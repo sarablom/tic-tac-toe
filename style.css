@@ -6,6 +6,42 @@
     font-family: 'Itim', cursive;
 }
 
+body {
+    background-color: rgb(70, 68, 68);
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem;
+    background: -webkit-linear-gradient(rgba(35,150,178,1), rgba(35,78,178,1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: #2396B2;
+    background: rgb(35,150,178); */
+    /* color: linear-gradient(90deg, rgba(35,150,178,1) 0%, rgba(35,78,178,1) 100%); */
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.announcer {
+    background: -webkit-linear-gradient(rgba(35,150,178,1), rgba(35,78,178,1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin: 1.5rem;
+}
+
 .container {
     margin: 0 auto;
     display: grid;
@@ -26,9 +62,27 @@
 }
 
 .playerX {
-    color: brown;
+    color: rgb(223, 96, 180);
 }
 
 .playerO {
-    color: cornflowerblue;
+    color: #96B223;
+}
+
+#reset {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    color: #2396B2;
+    font-size: 1.2rem;
+}
+
+#reset:active, #reset:focus, #reset:hover {
+    background: #2396B2;
+    color: white;
+}
+
+.hide {
+    display: none;
 }

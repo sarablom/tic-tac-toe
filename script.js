@@ -2,6 +2,7 @@ const tiles = Array.from(document.querySelectorAll('.tile'));
 const playerDisplay = document.querySelector('.display-player');
 const resetButton = document.querySelector('#reset');
 const announcer = document.querySelector('.announcer');
+const displayTurn = document.querySelector('.display');
 
 let board = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
@@ -52,12 +53,15 @@ const announce = type => {
     switch(type) {
         case PLAYERO_WON:
             announcer.innerHTML = 'Player <span class=playerO>O</span> won';
+            displayTurn.classList.add('hide');
             break;
         case PLAYERX_WON:
             announcer.innerHTML = 'Player <span class=playerX>X</span> won';
+            displayTurn.classList.add('hide');
             break;
         case TIE:
             announcer.innerText = 'Tie';
+            displayTurn.classList.add('hide');
     }
     announcer.classList.remove('hide');
 }
@@ -105,6 +109,7 @@ const resetBoard = () => {
     board = ['', '', '', '', '', '', '', '', ''];
     isGameActive = true;
     announcer.classList.add('hide');
+    displayTurn.classList.remove('hide');
 
     if (currentPlayer === 'O') {
         changePlayer();
