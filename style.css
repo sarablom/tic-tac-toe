@@ -17,9 +17,6 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* color: #2396B2;
-    background: rgb(35,150,178); */
-    /* color: linear-gradient(90deg, rgba(35,150,178,1) 0%, rgba(35,78,178,1) 100%); */
 }
 
 .background {
@@ -47,11 +44,11 @@ h1 {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    max-width: 300px;
+    max-width: 320px;
 }
 
 .tile {
-    border: 1px solid black;
+    border: 5px solid white;
     min-width: 100px;
     min-height: 100px;
     display: flex;
